@@ -79,6 +79,7 @@ module.exports = function (grunt) {
               '!**/sass/**',
               '!**/HTML/**',
               '!**/*.scss',
+              '!**/images/sources/**',
               '!.gitignore',
               '!.jshintignore',
               '!.jscsrc',
@@ -155,6 +156,12 @@ module.exports = function (grunt) {
       },
       html: {
         files: ['*.html', '**/*.html'],
+        options: {
+          spawn: false
+        }
+      },
+      images: {
+        files: ['**/*.{png,jpg,gif,svg}'],
         options: {
           spawn: false
         }

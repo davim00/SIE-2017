@@ -5,7 +5,7 @@
  */
 
  // Core variables and mixins
- @import "bootstrap/variables";
+ @import "theme/variables";
  @import "bootstrap/mixins";
 
  // Reset and dependencies
@@ -56,4 +56,7 @@
  @import "bootstrap/responsive-utilities";
 
 // Theme styles
-@import "theme/admin.scss";
+@import "theme/admin";
+@import "theme/helper-classes";
+@import "theme/page-layout";
+@import "theme/home";

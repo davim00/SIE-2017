@@ -1,0 +1,77 @@
+//
+// Theme-specific Helper Classes
+// --------------------------------------------------
+
+
+// Vertical spacing
+.top-lg-space {
+  padding-top: ($grid-gutter-width *2 );
+}
+
+.bottom-lg-space {
+  padding-bottom: ($grid-gutter-width * 2);
+}
+
+.top-sm-space {
+  padding-top: $grid-gutter-width;
+}
+
+.bottom-sm-space {
+  padding-bottom: $grid-gutter-width;
+}
+
+.top-xs-space {
+  padding-top: ($grid-gutter-width / 2);
+}
+
+.bottom-xs-space {
+  padding-bottom: ($grid-gutter-width / 2);
+}
+
+
+// Horizontal spacing
+.left-lg-space {
+  padding-left: ($grid-gutter-width * 2);
+}
+
+.right-lg-space {
+  padding-right: ($grid-gutter-width * 2);
+}
+
+.left-sm-space {
+  padding-left: $grid-gutter-width;
+}
+
+.right-sm-space {
+  padding-right: $grid-gutter-width;
+}
+
+.left-xs-space {
+  padding-left: ($grid-gutter-width / 2);
+}
+
+.right-xs-space {
+  padding-right: ($grid-gutter-width / 2);
+}
+
+
+// Coloring
+.text-light {
+  color: $gray-dark;
+}
+
+.text-dark {
+  color: #fff;
+}
+
+.sie-magenta {
+  color: $brand-primary;
+}
+
+.sie-magenta-bg {
+  background-color: $brand-primary;
+}
+
+.sie-gray-bg {
+  background-color: lighten($gray-light, 10%);
+}
