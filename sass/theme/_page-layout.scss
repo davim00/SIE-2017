@@ -4,7 +4,7 @@
 
 
 // Header bar
-#HeaderPane {
+.site-header {
   background-color: $brand-secondary;
   height: $header-height;
 
@@ -65,5 +65,13 @@
 
   div[class*="col"]:nth-of-type(2) {
     text-align: right;
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    text-align: center;
+
+    div[class*="col"]:nth-of-type(2) {
+      text-align: center;
+    }
   }
 }

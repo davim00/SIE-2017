@@ -16,7 +16,7 @@ $gray-light:             adjust-hue(saturate(lighten($gray-base, 78), 12), 227) 
 $gray-lighter:           adjust-hue(saturate(lighten($gray-base, 95), 8), 227) !default; //
 
 $brand-primary:         #CC208E !default;
-$brand-secondary:       #050c23 !default;
+$brand-secondary:       #000822 !default;
 $brand-success:         #6713D2 !default;
 $brand-info:            $gray-dark !default;
 $brand-warning:         #F2E636 !default;
@@ -44,8 +44,8 @@ $link-hover-decoration: none !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:  'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, 'Times New Roman', Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
@@ -67,7 +67,7 @@ $line-height-base:        1.6 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    Raleway, Futura, Helvetica, Arial, sans-serif !default;
+$headings-font-family:    'Raleway', 'Futura', Helvetica, Arial, sans-serif !default;
 $headings-font-weight:    600 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          darken($gray, 10) !default;
@@ -365,7 +365,7 @@ $container-lg:                 $container-large-desktop !default;
 // Basics of a navbar
 $navbar-height:                    50px !default;
 $navbar-margin-bottom:             0 !default;
-$navbar-border-radius:             $border-radius-base !default;
+$navbar-border-radius:             0 !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;

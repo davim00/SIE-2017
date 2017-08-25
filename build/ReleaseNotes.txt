@@ -1,0 +1,12 @@
+﻿<h3>SIE 2017 Theme for Dnn</h3>
+	Axiom America <br/>
+	<a href="mailto:marketing@axiomamerica.com">marketing@DnnConsulting.nl</a><br />
+	<a href="https://www.axiomamerica.com">https://www.axiomamerica.com</a><br />
+<hr/>
+	<h3>About the SIE 2017 Theme</h3>
+
+	<h4>Version 01.00.00</h4><br />
+	<h5>Initial Release</h5>
+	<ul>
+		<li>None, first release</li>
+	</ul>

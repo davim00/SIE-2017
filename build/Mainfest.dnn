@@ -1,0 +1,65 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="Axiom.America.SIE-2017" type="Skin" version="01.00.00">
+      <friendlyName>SIE 2017</friendlyName>
+      <description>A responsive DNN skin using Bootstrap v3.3.7. Requires installation via the Host/Extensions page.</description>
+      <owner>
+        <name>Axiom America LLC</name>
+        <organization>Axiom America LLC</organization>
+        <url>https://www.axiomamerica.com</url>
+        <email>marketing@axiomamerica.com</email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.00</dependency>
+      </dependencies>
+      <components>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>portals/_default/skins/SIE_2017</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Skin">
+          <skinFiles>
+            <skinName>SIE 2017</skinName>
+            <basePath>portals/_default/skins/SIE_2017</basePath>
+            <skinFile>
+              <name>Home.ascx</name>
+            </skinFile>
+          </skinFiles>
+        </component>
+      </components>
+    </package>
+
+    <package name="Axiom.America.SIE-2017" type="Container" version="01.00.00">
+      <friendlyName>SIE 2017</friendlyName>
+      <description>Containers for the SIE 2017 Theme package.</description>
+      <owner>
+        <name>Axiom America LLC</name>
+        <organization>Axiom America LLC</organization>
+        <url>https://www.axiomamerica.com</url>
+        <email>marketing@axiomamerica.com</email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Container">
+          <containerFiles>
+            <containerName>SIE 2017</containerName>
+            <basePath>portals/_default/containers/SIE_2017</basePath>
+            <containerFile>
+              <name>Blank.ascx</name>
+            </containerFile>
+          </containerFiles>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

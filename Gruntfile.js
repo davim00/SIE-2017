@@ -13,6 +13,10 @@ module.exports = function (grunt) {
     },
     // Uglify
     uglify: {
+      mini: {
+        src: 'js/scripts.js',
+        dest: 'js/scripts.min.js'
+      },
       build: {
         src: 'js/scripts.js',
         dest: 'js/scripts.min.js'
@@ -48,7 +52,7 @@ module.exports = function (grunt) {
           precision: 8
         },
         files: {
-          'build/style.css' : 'sass/style.scss'
+          'build/Skin/skin.css' : 'sass/skin.scss'
         }
       }
     },
@@ -78,6 +82,7 @@ module.exports = function (grunt) {
               '!**/node_modules/**',
               '!**/sass/**',
               '!**/HTML/**',
+              '!**/content-templates/**',
               '!**/*.scss',
               '!**/images/sources/**',
               '!.gitignore',
@@ -106,7 +111,7 @@ module.exports = function (grunt) {
               '**/Containers/**',
               '*.dnn',
               'License.txt',
-              'ReleastNotes.txt',
+              'ReleaseNotes.txt',
             ],
             dest: 'build/'
           },
@@ -114,16 +119,41 @@ module.exports = function (grunt) {
       },
     },
     // Zip
-    zip: {
-      build: {
+    compress: {
+      build_skin: {
+        options: {
+          archive: 'build/Skin.zip'
+        },
         files: [
           {
-            src: ['build/Containers/*'],
-            dest: 'build/Containers.zip'
+            expand: true,
+            cwd: 'build/Skin/',
+            src: [ '**' ]
           },
+        ],
+      },
+      build_containers: {
+        options: {
+          archive: 'build/Containers.zip'
+        },
+        files: [
           {
-            src: ['build/Skin/*'],
-            dest: 'build/Skin.zip'
+            expand: true,
+            cwd: 'build/Containers/',
+            src: [ '**' ]
+          },
+        ],
+      },
+      build_installation: {
+        options: {
+          archive: 'build/Name-of-theme-Install.zip'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'build/',
+            src: [ '*' ],
+            filter: 'isFile'
           },
         ],
       },
@@ -134,13 +164,13 @@ module.exports = function (grunt) {
         src: [ 'build' ]
       },
       stylesheets: {
-        src: [ 'build/**/*.css', '!build/**/style.css' ]
+        src: [ 'build/*.css' ]
       },
       scripts: {
         src: [ 'build/**/*.js', '!build/**/scripts.js' ]
       },
       templates: {
-        src: [ 'build/**/Containers/**', 'build/**/Skin/**' ]
+        src: [ 'build/**/*', '!build/Name-of-theme-Install.zip', ]
       },
     },
     // Watch
@@ -155,7 +185,7 @@ module.exports = function (grunt) {
         }
       },
       html: {
-        files: ['*.html', '**/*.html'],
+        files: ['*.html', '*.cshtml', '**/*.html', '**/*.cshtml'],
         options: {
           spawn: false
         }
@@ -192,7 +222,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-zip');
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -216,5 +246,5 @@ module.exports = function (grunt) {
   grunt.registerTask(
     'build',
     'Compiles all of the assets and copies the files to the build directory',
-    [ 'clean:build', 'copy', 'stylesheets', 'scripts', 'templates' ]);
+    [ 'clean:build', 'copy', 'stylesheets', 'scripts', 'compress', 'templates' ]);
 };
