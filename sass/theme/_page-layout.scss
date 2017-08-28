@@ -18,20 +18,8 @@
     text-align: right;
 
     a {
-      position: relative;
       display: inline-block;
       margin: $header-padding-vertical 0;
-
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-      }
     }
 
     .social-logo {
@@ -58,7 +46,7 @@
 
 
 // Footer
-#FooterPane {
+.site-footer {
   background-color: $brand-secondary;
   padding: ($grid-gutter-width * 2) 0;
   color: $gray-light;

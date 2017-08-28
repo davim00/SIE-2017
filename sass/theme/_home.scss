@@ -10,7 +10,7 @@
   background-size: cover;
 
   @media (max-width: $grid-float-breakpoint-max) {
-    background-image: none;
+    background-image: none !important;
   }
 }
 
@@ -35,7 +35,7 @@
 
   @media (max-width: 480px) {
 
-    object {
+    img {
       width: 230px;
     }
 
